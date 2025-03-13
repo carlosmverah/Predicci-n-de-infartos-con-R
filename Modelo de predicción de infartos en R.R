@@ -16,7 +16,7 @@ modelo <- glm(stroke ~ age + hypertension + gender + smoking_status, data = dato
 # Mostrar resultados
 summary(modelo)
 
-# Crear un nuevo paciente con variables categóricas, la edad, hipertensión, género y estatus de fumador pueden variar.
+# Crear un nuevo paciente con variables categóricas; la edad, hipertensión, género y estatus de fumador pueden variar.
 nuevo_paciente <- data.frame(age = 55, hypertension = 1, gender = factor("Male", levels = levels(datos$gender)), smoking_status = factor("smokes", levels = levels(datos$smoking_status)))
 
 # Hacer la predicción
